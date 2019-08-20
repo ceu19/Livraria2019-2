@@ -12,9 +12,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Lob;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 
 /**
@@ -22,30 +20,21 @@ import javax.persistence.Temporal;
  * @author Aluno
  */
 @Entity
-public class Livro implements Serializable {
+public class Editora implements Serializable {
+
+    @OneToMany(mappedBy = "editora")
+    private List<Livro> livros;
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private String nome;
-    private Integer pag;
-    private String isbn;
-    private String idioma;
+    private String end;
+    private String logo;
+    private String telefone;
     @Temporal(javax.persistence.TemporalType.DATE)
-    private Date lancamento;
-    @Lob
-    private String sinopse;
-    private String foto;
-    private String foto2;
-    private String foto3;
-    
-    @ManyToOne
-    private Genero genero;
-    @ManyToOne
-    private Editora editora;
-    @ManyToMany
-    private List<Autor>autores;
-    
+    private Date fundacao;
+
+
 }

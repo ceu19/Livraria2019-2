@@ -6,34 +6,25 @@
 package modelo;
 
 import java.io.Serializable;
-import java.util.Date;
-import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.Temporal;
 
 /**
  *
  * @author Aluno
  */
 @Entity
-public class Autor implements Serializable {
-
-    @ManyToMany(mappedBy = "autores")
-    private List<Livro> livros;
+public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nome;
+    private String email;
+    private String senha;
     private String foto;
-    private String nasc;
-    @Temporal(javax.persistence.TemporalType.DATE)
-    private Date datanasc;
-
-   
+    private String tipo;
 }
