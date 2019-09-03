@@ -1,60 +1,60 @@
-<% @ include  file = " ../cabecalho.jsp " %>
+<%@include file="../cabecalho.jsp" %>
 
-< div  class = " card " >
-    < div  class = " card-header " >
-        < h4  class = " card-title " > Genero </ h4 >
-    </ div >
-    < div  class = " card-body " >
-        < A  class = " btn btn-primário btn-round texto-center "  href = " add.jsp " >
-            < i  class = " tim-icons icon-simple-add " > </ i >
-        </ a >
-        < div  class = " table-responsive " >
-            < table  class = " table tablesorter "  id = " " >
-                < thead  class = " text-primary " >
-                < th >
-                    identidade
-                </ th >
-                < th >
+<div class="card ">
+    <div class="card-header">
+        <h4 class="card-title">Genero</h4>
+    </div>
+    <div class="card-body">
+        <a class="btn btn-primary btn-round text-center" href="add.jsp">
+            <i class="tim-icons icon-simple-add"></i> Adiciona
+        </a>
+        <div class="table-responsive">
+            <table class="table tablesorter " id="">
+                <thead class=" text-primary">
+                <th>
+                    ID
+                </th>
+                <th>
                     Genero
-                </ th >
-                < th >
+                </th>
+                <th>
                     Edita
-                </ th >
-                < th >
+                </th>
+                <th>
                     Deleta
-                </ th >
-                </ thead >
-                < tbody >
+                </th>
+                </thead>
+                <tbody>
                     
-                        < tr >
-                            < td > 1 </ td >
-                            < td > Terror </ td >
-                            < td >
-                                < A  class = " btn btn-info btn-fab btn-ícone btn-round "  href = " " >
-                                    < i  class = " tim-ícones icon-pencil " > </ i >
-                                </ a >
-                            </ td >
-                            < td >
-                                < A  class = " btn btn-primário btn-ícone btn-round btn-fab "  href = " " >
-                                    < i  class = " tim-ícones ícone-lixo-simples " > </ i >
-                                </ a >
-                            </ td >
-                        </ tr >
+                        <tr>
+                            <td>1</td>
+                            <td>Terror</td>
+                            <td>
+                                <a class="btn btn-info btn-fab btn-icon btn-round" href="">
+                                    <i class="tim-icons icon-pencil"></i>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary btn-fab btn-icon btn-round" href="">
+                                    <i class="tim-icons icon-trash-simple"></i>
+                                </a>
+                            </td>
+                        </tr>
                            
-                </ tbody >
-            </ table >
-        </ div >
-    </ div >
-    < div  class = " cartão-rodapé " >
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card-footer">
        
-            < div  class = " alerta alert-primary alerta-demitível desvanece-se show "  role = " alert " >
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
                 
-                < button  type = " button "  class = " fechar "  data-dismiss = " alerta "  aria-label = " Fechar " >
-                    < i  class = " tim-ícones icon-simples-remover " > </ i >
-                </ button >
-            </ div >
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <i class="tim-icons icon-simple-remove"></i>
+                </button>
+            </div>
         
-    </ div >
-</ div >
+    </div>
+</div>
 
-<% @ include  file = " ../rodape.jsp " %>
+<%@include file="../rodape.jsp" %>
